@@ -1,0 +1,10 @@
+// Hash value(Returns the Memory location)
+
+class Hashvalue {
+    public static void main(String[] args) {
+        String name="Pavi";
+        int age=23;
+        System.out.println(name.hashCode());
+        
+    }
+}
