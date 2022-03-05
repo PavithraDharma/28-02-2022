@@ -1,0 +1,35 @@
+/*  Cloning concept(The interface which contains no methods or any other fields is marker interface.Ex:Cloneable,serializable,remote)
+   
+   Step 1: class should implement cloneable interface
+   Step 2: need to declare "CloneNotSupportedException" in main method
+   Step 3: nee to create original object
+   Step 4: nne to call clone() method and typecast to original object  */
+   
+
+class Student implements Cloneable{
+    int roll;
+    String name;
+    Student()
+    {
+        roll=28;
+        name="Pavithra";
+    }
+    public void getInfo()
+    {
+        System.out.println(roll);
+        System.out.println(name);
+    }
+    public static void main(String[] args) throws CloneNotSupportedException  //Step 2
+    {
+        System.out.println("--By new keyword & constructor--");
+        //step 3
+        Student stud=new Student();
+        stud.getInfo();
+        
+        System.out.println("--By using clone method--");
+        //step 4
+        Student cloneobj=(Student)stud.clone();   //Student cloneobj=stud;
+        cloneobj.getInfo();
+        
+    }
+}
