@@ -1,0 +1,22 @@
+/* BINARY  CONVERSION
+ 1. Store the remainder when the number is divided by 2 in an array.
+   2. Divide the number by 2
+   3. Repeat the above two steps until the number is greater than zero.
+   4. Print the array in reverse order now.
+*/
+class BinaryConversion {
+    public static void main(String[] args) {
+       int num=8;int rem[]=new int[10];
+       int i=0;
+       while(num>0)
+       {
+           rem[i]=num%2;
+           num=num/2;
+           i++;
+       }
+       for(int j=i-1;j>=0;j--)
+       {
+           System.out.print(rem[j]);
+       }
+    }
+}
