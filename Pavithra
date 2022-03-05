@@ -1,0 +1,23 @@
+//Cloning
+class Pavithra implements Cloneable
+{
+    String dob;
+    int age;
+    Pavithra()
+    {
+      dob="28-05-1998";
+      age=23;
+    }
+    public void getDetails()
+    {
+        System.out.println(dob+" "+age);
+    }
+    public static void main(String[] args) throws CloneNotSupportedException
+     {
+         Pavithra obj1=new Pavithra();
+         obj1.getDetails();
+         System.out.println("After cloning");
+         Pavithra obj2=(Pavithra)obj1.clone();     //Pavithra obj2=ob1.clone();
+         obj2.getDetails();
+     }
+}
