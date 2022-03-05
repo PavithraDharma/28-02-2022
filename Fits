@@ -1,0 +1,12 @@
+// Whether given value fits into integer and long or not
+
+class Fits {
+    public static void main(String[] args) {
+         long x=-150;
+       if((x>=-32768 && x<=32767) || (x>=0 && x<=127))
+           System.out.println("short");
+       if((x<=-128 && x<=127))
+           System.out.println("int");
+      
+    }
+}
