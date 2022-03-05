@@ -1,0 +1,27 @@
+//change the values using cloning concept 
+class Updation implements Cloneable
+{
+    String dob;
+    int age; String sign;
+    Updation()
+    {
+     dob="28May98";
+     age=22;
+     sign="cancer";
+    }
+    public void getInfo()
+    {
+        System.out.println("Dob= "+dob);
+        System.out.println("Age= "+age);
+        System.out.println("Sign= "+sign);
+    }
+     public static void main(String[] args) throws CloneNotSupportedException
+     {
+        Updation obj1=new Updation();
+        obj1.getInfo();
+        System.out.println("------After updation------");
+        Updation obj2=obj1;
+        obj2.age=23; obj2.sign="Gemini";
+        obj2.getInfo();
+     }
+}
