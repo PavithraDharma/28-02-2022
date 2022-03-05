@@ -1,0 +1,26 @@
+//cloning in Employee Example 
+
+class Employee implements Cloneable
+{
+    String name;
+    int age;
+    int salary;
+    Employee()
+    {
+        name="abc";
+        age=24;
+        salary=30000;
+    }
+    public void getInfo()
+    {
+        System.out.println(name+"\n"+age+"\n"+salary);
+    }
+     public static void main(String[] args) throws CloneNotSupportedException
+     {
+        Employee obj1=new Employee();
+        obj1.getInfo();
+        System.out.println("After cloning");
+        Employee obj2=(Employee)obj1.clone();      //Employee obj2=obj1;
+        obj2.getInfo();
+     }
+}
