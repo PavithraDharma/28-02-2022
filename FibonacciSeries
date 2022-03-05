@@ -1,0 +1,22 @@
+/* Fibonacci Series:Prints output as 0 1 1 2 2 3.
+   1.Initialise n1=0,n2=1
+   2.Print n1,n2 & calculate next=n1+n2
+   3.Then for loop starts calculates other numbers.
+   4.Print next value 
+   5.Then store n2 value in n1 and next value in n2 
+   6.Calculate next value and increment i */
+    
+class FibonacciSeries {
+    public static void main(String[] args) {
+        int n1=0, n2=1;
+        System.out.println(n1+"\n"+n2);
+        int next=n1+n2;
+        for(int i=3;i<=5;++i)
+        {
+          System.out.println(next);
+          n1=n2;
+          n2=next;
+          next=n1+n2;
+        }
+    }
+}
